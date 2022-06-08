@@ -275,26 +275,40 @@ class _ExplorePageState extends State<ExplorePage>
       child: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: List.generate(item_icons.length, (index) {
-            return Container(
-              width: item_icons[index]['size'],
-              height: item_icons[index]['size'],
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: grey.withOpacity(0.1),
-                      spreadRadius: 5,
-                      blurRadius: 10,
-                      // changes position of shadow
-                    ),
-                  ]),
-              child: Center(
-                child: SvgPicture.asset(
-                  item_icons[index]['icon'],
-                  width: item_icons[index]['icon_size'],
+            return InkWell(
+              onTap: () => {
+                if (item_icons[index]['name']== "valid" ) {
+                  controller.triggerRight()
+                },
+                if (item_icons[index]['name']== "cancel" ) {
+                  controller.triggerLeft()
+                },
+                
+                if (item_icons[index]['name']== "star" ) {
+                  controller.triggerUp()
+                }
+              },
+              child: Container(
+                width: item_icons[index]['size'],
+                height: item_icons[index]['size'],
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: grey.withOpacity(0.1),
+                        spreadRadius: 5,
+                        blurRadius: 10,
+                        // changes position of shadow
+                      ),
+                    ]),
+                child: Center(
+                  child: SvgPicture.asset(
+                    item_icons[index]['icon'],
+                    width: item_icons[index]['icon_size'],
+                  ),
                 ),
               ),
             );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tinder_clone/pages/root_app.dart';
 
 import '../theme/colors.dart';
 
@@ -31,16 +32,19 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Connecte-toi avec ton adresse e-mail", 
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: black.withOpacity(0.5)),),
-                  SizedBox(height: 20),
+                  Text(
+                    "Connexion",
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600,
+                        color: black.withOpacity(0.5)),
+                  ),
                 ],
               ),
             ),
             SizedBox(height: 35),
+            LoginForm(),
+            SizedBox(height: 125),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 shape: StadiumBorder(),
@@ -50,16 +54,73 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               child: Text(
-                'ok',
+                'Se connecter',
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.normal,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
                   color: black.withOpacity(0.5),
                 ),
-              )
-            )
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RootPage(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class LoginForm extends StatefulWidget {
+  @override
+  State<LoginForm> createState() => _LoginFormState();
+}
+
+class _LoginFormState extends State<LoginForm> {
+  var _obscureText = true;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(
+        horizontal: 30,
+      ),
+      child: Column(
+        children: [
+          TextField(
+            decoration: InputDecoration(
+                labelText: 'Email',
+                labelStyle: TextStyle(
+                  color: Colors.grey[400],
+                )),
+          ),
+          SizedBox(height: 30),
+          TextField(
+            obscureText: _obscureText,
+            decoration: InputDecoration(
+              labelStyle: TextStyle(
+                color: Colors.grey[400],
+              ),
+              labelText: 'Mot de passe',
+              suffixIcon: IconButton(
+                icon: Icon(
+                  Icons.visibility,
+                  color: Colors.black,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _obscureText = !_obscureText;
+                  });
+                },
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

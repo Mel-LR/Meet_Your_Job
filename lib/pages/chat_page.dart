@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tinder_clone/constants.dart';
 import 'package:tinder_clone/data/chats_json.dart';
 import 'package:tinder_clone/theme/colors.dart';
 
@@ -28,7 +29,9 @@ class _ChatPageState extends State<ChatPage> {
               Text(
                 "Messages",
                 style: TextStyle(
-                    fontSize: 18, fontWeight: FontWeight.bold, color: primary),
+                    fontSize: 18, 
+                    fontWeight: FontWeight.bold, 
+                    color: kPrimaryColor),
               ),
               Container(
                 height: 25,
@@ -52,7 +55,11 @@ class _ChatPageState extends State<ChatPage> {
           thickness: 0.8,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 8, top: 0, right: 8),
+          padding: const EdgeInsets.only(
+            left: 8, 
+            top: 0, 
+            right: 8
+          ),
           child: Container(
             height: 38,
             decoration: BoxDecoration(
@@ -66,7 +73,8 @@ class _ChatPageState extends State<ChatPage> {
                     Icons.search,
                     color: black.withOpacity(0.5),
                   ),
-                  hintText: "Search 0 Matches"),
+                  hintText: "Recherchez"
+              ),
             ),
           ),
         ),
@@ -82,9 +90,11 @@ class _ChatPageState extends State<ChatPage> {
             Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Text(
-                "New Matches",
+                "Nouveaux Matches",
                 style: TextStyle(
-                    fontSize: 15, fontWeight: FontWeight.w500, color: primary),
+                    fontSize: 15, 
+                    fontWeight: FontWeight.w500, 
+                    color: kPrimaryColor),
               ),
             ),
             SizedBox(
@@ -108,9 +118,19 @@ class _ChatPageState extends State<ChatPage> {
                               chats_json[index]['story']
                                   ? Container(
                                       decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          border: Border.all(
-                                              color: primary, width: 3)),
+                                        shape: BoxShape.circle,
+                                          gradient: LinearGradient(
+                                            colors: [kPrimaryColor, kPrimaryLightColor],
+                                          ),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: grey.withOpacity(0.1),
+                                            spreadRadius: 10,
+                                            blurRadius: 15,
+                                          // changes position of shadow
+                                          ),
+                                        ],
+                                      ),
                                       child: Padding(
                                         padding: const EdgeInsets.all(3.0),
                                         child: Container(
@@ -189,9 +209,19 @@ class _ChatPageState extends State<ChatPage> {
                               userMessages[index]['story']
                                   ? Container(
                                       decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          border: Border.all(
-                                              color: primary, width: 3)),
+                                        shape: BoxShape.circle,
+                                          gradient: LinearGradient(
+                                            colors: [kPrimaryColor, kPrimaryLightColor],
+                                          ),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: grey.withOpacity(0.1),
+                                            spreadRadius: 10,
+                                            blurRadius: 15,
+                                          // changes position of shadow
+                                          ),
+                                        ],
+                                      ),
                                       child: Padding(
                                         padding: const EdgeInsets.all(3.0),
                                         child: Container(

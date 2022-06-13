@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:tinder_clone/constants.dart';
 import 'package:tinder_clone/data/account_json.dart';
 import 'package:tinder_clone/theme/colors.dart';
 
@@ -24,16 +25,23 @@ class _AccountPageState extends State<AccountPage> {
       child: Container(
         width: size.width,
         height: size.height * 0.60,
-        decoration: BoxDecoration(color: white, boxShadow: [
-          BoxShadow(
-            color: grey.withOpacity(0.1),
-            spreadRadius: 10,
-            blurRadius: 10,
-            // changes position of shadow
-          ),
-        ]),
+        decoration: BoxDecoration(
+          color: white, 
+          boxShadow: [
+            BoxShadow(
+              color: grey.withOpacity(0.1),
+              spreadRadius: 10,
+              blurRadius: 10,
+              // changes position of shadow
+            ),
+          ]
+        ),
         child: Padding(
-          padding: const EdgeInsets.only(left: 30, right: 30, bottom: 40),
+          padding: const EdgeInsets.only(
+            left: 30, 
+            right: 30, 
+            bottom: 40
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -51,7 +59,10 @@ class _AccountPageState extends State<AccountPage> {
               ),
               Text(
                 account_json[0]['name'],
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                  fontSize: 25, 
+                  fontWeight: FontWeight.w600
+                ),
               ),
               SizedBox(
                 height: 20,
@@ -75,7 +86,8 @@ class _AccountPageState extends State<AccountPage> {
                                 blurRadius: 15,
                                 // changes position of shadow
                               ),
-                            ]),
+                            ]
+                          ),
                         child: Icon(
                           Icons.settings,
                           size: 35,
@@ -86,11 +98,12 @@ class _AccountPageState extends State<AccountPage> {
                         height: 10,
                       ),
                       Text(
-                        "SETTINGS",
+                        "PARAMETRES",
                         style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
-                            color: grey.withOpacity(0.8)),
+                            color: grey.withOpacity(0.8)
+                        ),
                       )
                     ],
                   ),
@@ -109,7 +122,7 @@ class _AccountPageState extends State<AccountPage> {
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     gradient: LinearGradient(
-                                      colors: [primary_one, primary_two],
+                                      colors: [kPrimaryColor, kPrimaryLightColor],
                                     ),
                                     boxShadow: [
                                       BoxShadow(
@@ -141,9 +154,13 @@ class _AccountPageState extends State<AccountPage> {
                                           blurRadius: 15,
                                           // changes position of shadow
                                         ),
-                                      ]),
+                                      ]
+                                    ),
                                   child: Center(
-                                    child: Icon(Icons.add, color: primary),
+                                    child: Icon(
+                                      Icons.add, 
+                                      color: kPrimaryColor
+                                    ),
                                   ),
                                 ),
                               )
@@ -154,7 +171,7 @@ class _AccountPageState extends State<AccountPage> {
                           height: 10,
                         ),
                         Text(
-                          "ADD MEDIA",
+                          "PHOTO PROFIL",
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
@@ -189,7 +206,7 @@ class _AccountPageState extends State<AccountPage> {
                         height: 10,
                       ),
                       Text(
-                        "EDIT INFO",
+                        "PROFIL",
                         style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w600,

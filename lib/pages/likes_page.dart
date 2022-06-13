@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tinder_clone/constants.dart';
 import 'package:tinder_clone/data/likes_json.dart';
 import 'package:tinder_clone/theme/colors.dart';
 
@@ -29,14 +30,19 @@ class _LikesPageState extends State<LikesPage> {
             children: [
               Text(
                 likes_json.length.toString() + " Likes",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 18, 
+                  fontWeight: FontWeight.bold,
+                  color: kPrimaryColor,
+                ),
               ),
               Text(
-                "Top Picks",
+                "Meilleurs profils",
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: black.withOpacity(0.5)),
+                    color: black.withOpacity(0.5)
+                ),
               ),
             ],
           ),
@@ -99,7 +105,7 @@ class _LikesPageState extends State<LikesPage> {
                                         width: 5,
                                       ),
                                       Text(
-                                        "Recently Active",
+                                        "Actif récemment",
                                         style: TextStyle(
                                           color: white,
                                           fontSize: 14,
@@ -124,7 +130,7 @@ class _LikesPageState extends State<LikesPage> {
                                         width: 5,
                                       ),
                                       Text(
-                                        "Offline",
+                                        "Hors ligne",
                                         style: TextStyle(
                                           color: white,
                                           fontSize: 14,

@@ -34,9 +34,12 @@ class _RootPageState extends State<RootPage> {
           ? "assets/images/graduation_active_icon.svg"
           : "assets/images/graduation_icon.svg",
       pageIndex == 1
+          ? "assets/images/favorite_active_icon.svg"
+          : "assets/images/favorite_icon.svg",
+      pageIndex == 2
           ? "assets/images/chat_active_icon.svg"
           : "assets/images/chat_icon.svg",
-      pageIndex == 2
+      pageIndex == 3
           ? "assets/images/account_active_icon.svg"
           : "assets/images/account_icon.svg",
     ];

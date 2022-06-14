@@ -168,7 +168,7 @@ class _LikesPageState extends State<LikesPage> {
                   borderRadius: BorderRadius.circular(30),
                   gradient: LinearGradient(colors: [yellow_one, yellow_two])),
               child: Center(
-                child: Text("SEE WHO LIKES YOU",
+                child: Text("VOIR PLUS DE PROFILS",
                     style: TextStyle(
                         color: white,
                         fontSize: 18,

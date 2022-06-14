@@ -17,11 +17,15 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "MEET YOUR JOB",
-              style: TextStyle(fontWeight: FontWeight.bold),
+            Image.asset(
+              "assets/images/logo_myj.png",
+              width: size.width * 0.6,
             ),
-            SizedBox(height: size.height * 0.03),
+            // Text(
+            //   "MEET YOUR JOB",
+            //   style: TextStyle(fontWeight: FontWeight.bold),
+            // ),
+            // SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
               "assets/images/icons/chat.svg",
               height: size.height * 0.45,

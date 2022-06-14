@@ -25,7 +25,10 @@ class Body extends StatelessWidget {
         children: <Widget>[
           Text(
             "Connexion",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.w600
+            ),
           ),
           SizedBox(height: size.height * 0.03),
           SvgPicture.asset(

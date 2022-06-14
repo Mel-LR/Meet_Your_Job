@@ -71,7 +71,7 @@ List userMessages = [
     "online": true,
     "story": true,
     "message": "Bonjour M. Cornet.",
-    "created_at": "1:00 pm"
+    "created_at": "13H00"
   },
   {
     "name": "Maya",
@@ -79,7 +79,7 @@ List userMessages = [
     "online": true,
     "story": false,
     "message": "Bien reçu!",
-    "created_at": "12:00 am"
+    "created_at": "12H00"
   },
   {
     "id": 3,
@@ -88,7 +88,7 @@ List userMessages = [
     "online": true,
     "story": true,
     "message": "Je vous ai envoyé mon cv par mail.",
-    "created_at": "3:30 pm"
+    "created_at": "15H30"
   },
   {
     "id": 4,
@@ -97,7 +97,7 @@ List userMessages = [
     "online": false,
     "story": false,
     "message": "Merci pour le retour",
-    "created_at": "9:00 am"
+    "created_at": "9H00"
   },
   {
     "id": 5,
@@ -106,7 +106,7 @@ List userMessages = [
     "online": true,
     "story": false,
     "message": "Bonjour, comment allez-vous?",
-    "created_at": "11:25 am"
+    "created_at": "11H25"
   },
   {
     "id": 6,
@@ -115,6 +115,6 @@ List userMessages = [
     "online": false,
     "story": true,
     "message": "Merci bien, bonne journée! 😄",
-    "created_at": "10:00 am"
+    "created_at": "10H00"
   },
 ];

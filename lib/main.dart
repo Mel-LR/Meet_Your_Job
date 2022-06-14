@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tinder_clone/constants.dart';
+import 'package:tinder_clone/pages/account_page.dart';
 import 'package:tinder_clone/screens/welcome/welcome_screen.dart';
 import 'package:tinder_clone/pages/root_app.dart';
 
@@ -13,9 +14,10 @@ class MyApp extends StatelessWidget {
       title: 'Test Meet Your Job',
       theme: ThemeData(
         primaryColor: kPrimaryColor,
+        fontFamily: "Kollektif",
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: RootPage(),
+      home: WelcomeScreen(),
     );
   }
 }

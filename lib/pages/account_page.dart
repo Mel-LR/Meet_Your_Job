@@ -14,6 +14,7 @@ class _AccountPageState extends State<AccountPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: grey.withOpacity(0.2),
+      
       body: getBody(),
     );
   }
@@ -211,11 +212,11 @@ class _AccountPageState extends State<AccountPage> {
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
                             color: grey.withOpacity(0.8)),
-                      )
+                      ),
                     ],
                   )
                 ],
-              )
+              ),
             ],
           ),
         ),
